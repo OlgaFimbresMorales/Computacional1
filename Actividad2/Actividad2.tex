@@ -1,0 +1,160 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx} 
+\usepackage[dvipsnames]{xcolor}
+\title{Elementos de la programación Python 1.}
+\author{\textcolor{JungleGreen}{Olga María Fimbres Morales}}
+\date{?? de Enero 2016}
+\begin{document}
+\maketitle
+\pagebreak
+\section*{Introducción.}
+Anteriormente ya hemos trabajado con lenguajes de programación, como lo es Fortran, los cuales nos han ayudado en la realización de diferentes programas sencillos que nos permiten realizar una operación matemática de una forma sencilla además de tener la posibilidad de realizar una representación de dicho problema. Siendo entonces una herramienta sumamente útil para una gran gama de ciencias.\\
+De igual modo, aprender un nuevo lenguaje de programación, al igual que lo es aprender un nuevo idioma, nos da la posibilidad de resolver aun más problemas pues ahora contamos con un mayor número de herramientas para abórdalos, ampliando así nuestras opciones para trabajar.
+
+\section*{Python}
+Python es un lenguaje de programación interpretado creado en 1991 por Guido van Rossum, es multiparadigma pues soporta orientación a objetos, programación imperativa y programación funcional.\\
+Existe una filosofía Python, la cual enfoca al lenguaje a ser simple, explicito, legible y práctico; lo que hace que sea sumamente sencillo de manejar incluso para principiantes pues facilita su manejo al utilizar palabras donde otros lenguajes utilizan símbolos.\\
+Posee además un modo interactivo en el que es posible ingresar los comandos uno a uno e ir observando sus resultados, lo que permite probar partes de un código antes de implementarlo por completo.\\
+Finalmente, cabe señalar que Python cuenta con una amplia biblioteca estándar las cuales incluyen un gran número de herramientas que son capaces de interactuar con otros lenguajes. Todo esto, y más, hace a Python una gran herramienta utilizable para casi cualquier persona.
+\pagebreak
+\section*{Problema 1}
+%\begin{boxedverbatim} 
+ from math import sqrt
+ print("Problema 1")
+ h = float(input("Proporciona la altura de la torre en metros: "))
+ t = sqrt(2*h/9.81)
+ print("El tiempo en que la pelota llega al suelo son",t,"segundos")
+%\end{boxedverbatim} 
+
+\begin{verbatim}
+from math import sqrt
+print("Problema 1")
+h = float(input("Proporciona la altura de la torre en metros: "))
+t = sqrt(2*h/9.81)
+print("El tiempo en que la pelota llega al suelo son",t,"segundos")
+\end{verbatim}
+\begin{verbatim}
+Problema 1
+Proporciona la altura de la torre en metros: 50
+('El tiempo en que la pelota llega al suelo son', 3.1927542840705043, 'segundos')
+\end{verbatim}
+\pagebreak
+\begin{verbatim}
+from math import pi
+print ("Problema 2")
+T = 60*float(input("Proporciona el periodo de un satélite alrededor de la Tierra en minutos: "))
+G = 6.67e-11
+M = 5.97e24
+R = 6371000.
+h = (((G*M*T**2)/(4*pi**2))**(1.0/3.0))- R
+print ("Su altura debe ser de", h, "metros")
+\end{verbatim}
+\begin{verbatim}
+Problema 2
+Proporciona el periodo de un satélite alrededor de la Tierra en minutos: 90
+('Su altura debe ser de', 279321.6253728606, 'metros')
+Problema 2
+Proporciona el periodo de un satélite alrededor de la Tierra en minutos: 45
+('Su altura debe ser de', -2181559.8978108233, 'metros')
+Problema 2
+Proporciona el periodo de un satélite alrededor de la Tierra en minutos: 24*60
+('Su altura debe ser de', 35855910.176174976, 'metros')
+\end{verbatim}
+\pagebreak
+\begin{verbatim}
+from math import sin,acos,pi, atan, sqrt
+print ("Problema 3")
+print ("Especifica las coordenadas cartesianas del punto: ")
+x = float(input("Introduce x: "))
+y = float(input("Introduce y: "))
+z = float(input("Inytoduce z: "))
+r = sqrt(x**2 + y**2 + z**2)
+theta = acos(z/r)
+phi = atan(y/x)
+print ("Las coordenas esféricas correspondientes son:")
+print("r =",r,"theta =",theta,"phi =",phi)
+\end{verbatim}
+\begin{verbatim}
+Problema 3
+Especifica las coordenadas cartesianas del punto: 
+Introduce x: 1
+Introduce y: 1
+Inytoduce z: 2
+Las coordenas esféricas correspondientes son:
+('r =', 2.449489742783178, 'theta =', 0.6154797086703871, 'phi =', 0.7853981633974483)
+\end{verbatim}
+\pagebreak
+\begin{verbatim}
+print ("Problema 4b"),
+print("Ingrese dos números, uno par y uno impar:")
+m = int(input("Ingrese el primer número: "))
+n = int(input("Ingrese el segundo número: "))
+while (m+n)%2==0:
+ print("Uno debe ser par y el otro impar.")
+m = int(input("Ingrese el primer número: "))
+n = int(input("Ingrese el segundo número: "))
+print("Los números que escogió son",m,"y",n)
+\end{verbatim}
+\pagebreak
+\begin{verbatim}
+from math import factorial
+print("Problema 5")
+print("Secuencia de Fibonacci.")
+f1,f2 = 0,1
+while f2<10:
+      print(f2)
+      f1,f2 = f2,f1+f2   
+print("-------------------- :)")
+print("Secuencia de Catalan.")
+n,C = 0.,1.
+while C<=1000000:
+    print(C) 
+    n,C = n+1,((2*(2*n+1))/(n+2))*C
+\end{verbatim}
+\begin{verbatim}
+Problema 5.2
+Secuencia de Fibonacci.
+1
+1
+2
+3
+5
+8
+-------------------- :)
+Secuencia de Catalan.
+1.0
+1.0
+2.0
+5.0
+14.0
+42.0
+132.0
+429.0
+1430.0
+4862.0
+16796.0
+58786.0
+208012.0
+742900.0
+\end{verbatim}
+mal resultado:
+\begin{verbatim}
+Secuencia de Catalan.
+1
+1
+2
+4
+8
+24
+72
+216
+648
+1944
+5832
+17496
+52488
+157464
+472392
+\end{verbatim}
+\end{document}
