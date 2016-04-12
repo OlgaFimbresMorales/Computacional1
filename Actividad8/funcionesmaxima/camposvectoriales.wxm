@@ -1,0 +1,66 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+/*CAMPOS VECTORIALES*/
+/*2 DIMENSIONES*/
+load(draw);
+F(x,y):=[cos(y^2),x-8];
+coord:setify(makelist(k,k,-6,6));
+points2d:listify(cartesian_product(coord,coord));
+vf2d(x,y):=vector([x,y],[cos(y^2),x-8]/6);
+vect2:makelist(vf2d(k[1],k[2]),k,points2d);
+apply(draw2d,append([color=magenta],vect2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+F(x,y):=[cos(y),x];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+coord:setify(makelist(k,k,-4,4));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+points2d:listify(cartesion_product(coord,coord));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+vf2d(x,y):=vector([x,y],[cos(y),x]/6);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+vect2:makelist(vf2d(k[1],k[2]),k,points2d);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+appy(draw2d,append([color=green],vect2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+/*CAMPO VECTORIAL DE GRADIENTE*/
+kill(f,x,y,gdf);
+f(x,y):=x^2-y^2;
+scalefactors([x,y]);
+ex(express(gdf(x,y)),diff);
+define(gdf(x,y),%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f(x,y):=x^2-y^2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+scalefactors([x,y]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ex(express(gdf(x,y)),diff);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+define(gdf(x,y),%);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

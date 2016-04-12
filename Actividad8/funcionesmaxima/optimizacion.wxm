@@ -1,0 +1,54 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+/*Optimizacion*/
+tex(f(x,y) := 2*x^3 + 3*y^4 - 5*x^2*y);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load(draw);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(enhanced3d=true, explicit(f(x,y),x,-3,3,y,-2,2),palette=[5,0,20]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(explicit(f(x,y),x,-3,3,y,-2,2),contour=map);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tex(fx:diff(f(x,y),x));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tex(fy:diff(f(x,y),y));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tex(solve([fx,fy],[x,y]));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tex(H:hessian(f(x,y),[x,y]));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tex(determinant(H));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst([x=-1,y=-1],diff(fx,x));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst([x=-1,y=-1],determinant(H));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f(-1,-1);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

@@ -1,0 +1,33 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+tex(diff(f(x,y),x));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tex(diff(diff(f(x,y),x),x));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tex(diff(diff(f(x,y),x),y));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tex(G:(x^6 +2) *y^-2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tex(diff(G,x,1,y,2,x,3));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tex(diff(G,x,1));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tex(diff(G,y,2));
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

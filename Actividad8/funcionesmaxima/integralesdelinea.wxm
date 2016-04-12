@@ -1,0 +1,20 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+/*con respecto a la longitud de arco*/
+tex(f(x,y) := 5*x^3 + 8*y - 9);
+tex([x,y]: [cos(t),sin(2*t)]);
+tex(rp: diff([x,y],t));
+romberg(f(x,y)*sqrt(rp.rp),t,0,1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+/* campos vectoriales*/
+tex(F(x,y,z) := [2*x^4*y^2, x^2*z, 6*y*z^5]);
+tex([x,y,z]: [t^5, t^3, t^2]);
+romberg(F(x,y,z) . diff([x,y,z], t), t, 0, 1);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

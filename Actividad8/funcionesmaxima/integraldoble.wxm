@@ -1,0 +1,19 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+/*Integrales dobles*/
+tex(f(x,y):=5*x^8 -3*x^2*y);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tex(integrate(integrate(f(x,y),y),x));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+/*Evaluando en limites*/
+tex(integrate(integrate(f(x,y),y,x^1/2,2-x),x,0,1));
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

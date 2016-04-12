@@ -1,0 +1,45 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+a: [1,2,3];
+b: [2,0,9];
+5*a;
+a + b;
+a . b;
+a ~ b;
+express(%);
+sqrt(a . a);
+sqrt(b . b);
+(a . b)/(a . a) * a;
+text(a);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a + b;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a . b;
+a ~ b;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+express(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+sqrt(a . a);
+sqrt(b . b);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+(a . b)/(a . a) * a;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ text(a);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

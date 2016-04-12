@@ -1,0 +1,18 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+/*Integración en coordenadas polares*/
+tex(f(x,y):=3*x^4+3*y^4);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tex([x,y]:[r*cos(theta),r*sin(theta)]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tex(integrate(integrate(f(x,y)*r,r,0,2*cos(theta)),theta,-%pi/2,%pi/2));
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

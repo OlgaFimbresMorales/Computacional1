@@ -1,0 +1,56 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+taylor(sin(x), x, 0, 8);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+taylor(e^x, x, 0, 8);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+B : taylor((1/sqrt(1-k^2*sin(x)^2)), x, 0, 8);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+i0 : coeff(B,x,0);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+i2 : coeff(B,x,2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+i4 : coeff(B,x,4);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+i6 : coeff(B,x,6);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+i8 : coeff(B,x,8);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+S : i0 + i2*x^2 + i4*x^4 + i6*x^6 + i8*x^8;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(S,x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(S,x,0,pi/2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+lcm(%);
+/* [wxMaxima: input   end   ] */
+
+
+
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

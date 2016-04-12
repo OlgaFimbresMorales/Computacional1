@@ -1,0 +1,15 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+load(draw);
+tex(F(x,y) := [3*sin(y^4),3*x^2 + 6]);
+tex(coord: setify(makelist(k,k,-4,4)));
+tex(points2d: listify(cartesian_product(coord,coord)));
+vf2d(x,y) := vector([x,y],[3*sin(y^4),3*x^2 + 6]/6);
+vect2: makelist(vf2d(k[1],k[2]),k,points2d);
+apply(draw2d,append([color=green],vect2));
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

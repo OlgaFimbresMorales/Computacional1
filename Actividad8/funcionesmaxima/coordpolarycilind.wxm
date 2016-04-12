@@ -1,0 +1,36 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+/*Integrales en coordenadas cilindricas*/
+f(x,y,z):=6*x^3*y^2*z;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+[x,y,z]:[r*cos(theta),r*sin(theta),z];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tex(integrate(integrate(integrate(f(x,y,z)*r,z,-2,3),r,0,4),theta,-%pi/2,%pi));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+/*Integrales en coordenadas esféricas*/
+kill(f,x,y,z);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tex(f(x,y,z) := 2*x^3*z);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tex([x,y,z] : [rho*sin(phi)*cos(theta), rho*sin(phi)*sin(theta), rho*cos(theta)]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tex(integrate(integrate(integrate(f(x,y,z)*rho^2*sin(phi),rho,0,1),theta,0,%pi),
+phi,0,%pi/2));
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

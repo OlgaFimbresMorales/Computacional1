@@ -1,0 +1,57 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+tex(f(x,y) := exp(x^4) * sin(y) + 8);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tex([x,y] : [s^2 * t, s * t^2]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tex(diff(f(x,y),s));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tex(diff(f(x,y), t));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tex(diff(f(x,y),x));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tex(diff(f(u,v),u));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(x,y);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(f(x,y),x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+F: x*y*z + x^2*y^3*z^4 -x -x*z;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+Fx: diff(F,x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+Fy: diff(F,y);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+Fz: diff(F,z);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+[-Fx/Fy,-Fy/Fz];
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

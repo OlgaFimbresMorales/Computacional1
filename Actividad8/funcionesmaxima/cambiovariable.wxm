@@ -1,0 +1,26 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+/*Cambio de variable*/
+tex(f(x,y):=3*x^4+y^6);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tex([x,y]: [2*u^3 - v^4, 8 * u^3 * v^2]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tex(J:jacobian([x,y],[u,v]));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tex(J:determinant(J));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+tex(integrate(integrate(f(x,y)*J,u,1,2),v,3,4));
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

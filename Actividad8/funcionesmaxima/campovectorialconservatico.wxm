@@ -1,0 +1,24 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+tex(F(x,y) := [x^3 - 8*y^4, 6*y^2 - 5*x^3]);
+load(vect);
+scalefactors([x,y]);
+curl(F(x,y));
+express(%);
+tex(ev(%, diff));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+F(x,y) := [x^3 + 5*y, 5*y^3 + 5*x];
+ev(express(curl(F(x,y))), diff);
+F(u,v) := [u^3 + 5*v, 5*v^3 + 5*u];
+scalefactors([u,v]);
+potential(F(u,v));
+define(f(u,v), %);
+f(2,3) - f(0,1);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

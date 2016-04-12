@@ -1,0 +1,25 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+plane1: 3*x + 4*y + 5*z = 0;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load(draw);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(enhanced3d = true, implicit(plane1, x, -4,4, y, -4,4, z, -6,6), palette=[20,-13,0]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+hyperboloid: x^2 + y^2 - z^2 = 1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(enhanced3d = true, implicit(hyperboloid, x, -5,5, y, -2.5,2.5, z, -4,4), palette=[10,23,-1]);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

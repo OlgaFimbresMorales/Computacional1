@@ -1,0 +1,99 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+r(t) := [t,cos(t),sin(t)];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+r(1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load(draw);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(parametric(cos(t),-cos(t),sin(t),t,8,12));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+limit(r(t),t,2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+limit(r(t), t,2,plus);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+limit(r(t),t,3,minus);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(r(t),t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+define(rp(t),diff(r(t),t));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(rp(1));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load(eigen);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+uvect(rp(t));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+trigsimp(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+define(T(t), %);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+define(Tp(t),diff(T(t),t));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+uvect(Tp(t));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+trigsimp(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+define(N(t), %);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load(vect);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+express(T(t) poner aqui simbolo producto punto N(t));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+trigsimp(%);
+define(B(t), %);
+float(B(1));
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

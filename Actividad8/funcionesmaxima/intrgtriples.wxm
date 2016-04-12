@@ -1,0 +1,10 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+/*Integrales triples*/
+tex(integrate(integrate(integrate(2*x^5*y^3*z^2,z,0,2*x^3+2*y),y,0,-3*x^3),x,0,2));
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$
