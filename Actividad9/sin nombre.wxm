@@ -1,0 +1,48 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+1!;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+3!;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ lsum (x^i, i, [1, 2]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+sum(2*x^2*n^k, k , 0, inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(all);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+F : sum((%pi)*sqrt(l/g)*((2*n)!/((2**n)*(n!))**2)*(sin(%theta/2)**(2*n)),n,0,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+2*F;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+define(T(%theta), (%));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+l:1;
+g:9.8;
+n:500;
+float(T(%pi/2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(all);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

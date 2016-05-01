@@ -1,0 +1,116 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+B : taylor((1/sqrt(1-k^2*sin(x)^2)), x, 0, 8);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+i0 : coeff(B,x,0);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+i2 : coeff(B,x,2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+i4 : coeff(B,x,4);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+i6 : coeff(B,x,6);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+i8 : coeff(B,x,8);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+S : i0 + i2*x^2 + i4*x^4 + i6*x^6 + i8*x^8;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(S,x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(S,x,0,pi/2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+P : %;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+define(k(%theta),sin(%theta));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst(k(%theta/2),k,P);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+F : %;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+F* 2/%pi;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+define(F(%theta), expand(%));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+/*Secuencia correcta*/
+B : taylor((1/sqrt(1-k^2*sin(x)^2)), x, 0, 8);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(B,x,0,%pi/2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+C : expand(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+define(K(%theta),sin(%theta));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+D : subst(K(%theta/2),k,C);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+D * 2/%pi;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+F: expand(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+define(T(%theta), (2*%pi)*(sqrt(l/g))*(F));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+l :1;
+g :9.8;
+float(T(%pi/2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(all);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(all);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+(1/sqrt(1-k^2*sin(x)^2));
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$
